@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.pyc
+.build/
+dist/
+widgets/cosmo-combo/lib/FocusPerimeter.app/
+widgets/cosmo-combo/lib/*-cache.json
+widgets/cosmo-combo/lib/*-index.json
+widgets/cosmo-combo/lib/focus-state.json
+widgets/cosmo-combo/lib/*.lock
+widgets/cosmo-combo/lib/*.stamp
+widgets/cosmo-combo/lib/*.tmp
+widgets/cosmo-combo/lib/cover.jpg
+widgets/cosmo-combo/lib/cover.sha256
