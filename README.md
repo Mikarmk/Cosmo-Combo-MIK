@@ -49,6 +49,20 @@ It preserves an existing `config.json` and timer state. It does not install depe
 
 If your Übersicht widgets folder is customized, copy the installed folder there and update `ROOT` in `widget.jsx` to match. `COSMO_INSTALL_DIR` is available for staging or a custom destination; the same `ROOT` adjustment applies.
 
+### Download from the Übersicht gallery
+
+Download [Cosmo-Combo-MIK.widget.zip](https://github.com/Mikarmk/Cosmo-Combo-MIK/raw/main/Cosmo-Combo-MIK.widget.zip), extract it, and move the `Cosmo-Combo-MIK.widget` folder into your Übersicht widgets folder.
+
+For the native perimeter, build the included source once:
+
+```bash
+bash "$HOME/Library/Application Support/Übersicht/widgets/Cosmo-Combo-MIK.widget/setup.command"
+```
+
+This requires Apple Command Line Tools, as described above. Then refresh the widget. The ZIP contains source and assets, not a prebuilt executable. Codex integration remains opt-in.
+
+The gallery image is [screenshot.png](screenshot.png), a 516 × 320 PNG rendering of the illustrated example shown above.
+
 ## Use the timer
 
 1. Select **15 / 30 / 45 / 60 min** and press **Start**.
@@ -96,6 +110,12 @@ Task status refreshes every five seconds using read-only local Codex metadata an
 
 ```bash
 ./scripts/test.sh
+```
+
+To rebuild the gallery archive after changing the widget:
+
+```bash
+python3 scripts/package.py
 ```
 
 The timer uses absolute timestamps instead of decrementing a counter. Both displays read the same state, so refreshing one widget does not restart the session.
